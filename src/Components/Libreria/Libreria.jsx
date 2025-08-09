@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import Cards from "../Cards/Cards";
-import Pagination from "../Pagination/Pagination";
 import "./Libreria_Style.css";
 import { useEffect } from "react";
+import Products_Container from "../Products_Container/Products_Container";
 const cardsData = [
   {
     badge: "NEW",
@@ -166,23 +165,53 @@ const Libreria = () => {
               aria-labelledby="dropdownCategorias"
             >
               <li>
-                <Link className="dropdown-item" to="/libreria/categoria1">
-                  Categoria 1
+                <Link
+                  className="dropdown-item"
+                  to={"/libreria?category=Librería"}
+                >
+                  Librería
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item" to="/libreria/categoria2">
-                  Categoria 2
+                <Link
+                  className="dropdown-item"
+                  to="/libreria?category=Papelería"
+                >
+                  Papelería
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item" to="/libreria/categoria3">
-                  Categoria 3
+                <Link
+                  className="dropdown-item"
+                  to="/libreria?category=Accesorios útiles"
+                >
+                  Accesorios útiles
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item" to="/libreria/categoria4">
-                  Categoria 4
+                <Link
+                  className="dropdown-item"
+                  to="/libreria?category=Electrónica"
+                >
+                  Electrónica
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="/libreria?category=Mates, vasos y botellas"
+                >
+                  Mates - vasos y botellas
+                </Link>
+              </li>
+              <li>
+                <Link className="dropdown-item" to="/libreria?category=Oficina">
+                  Oficina
+                </Link>
+              </li>
+              <li>
+                <Link className="dropdown-item" to="/libreria">
+                  Limpiar filtros
                 </Link>
               </li>
             </ul>
@@ -193,35 +222,59 @@ const Libreria = () => {
           <div className="col-2 box_categorias">
             <h4 className="fw-bold">Categorías</h4>
             <div className="d-flex flex-column">
+              <hr />
               <Link
-                to={"/libreria/categoria"}
+                to={"/libreria?category=Librería"}
                 className="text-muted var-txt text-decoration-none"
               >
-                Categoria
+                Librería
               </Link>
+              <hr />
               <Link
-                to={"/libreria/categoria2"}
+                to={"/libreria?category=Papelería"}
                 className="text-muted var-txt text-decoration-none"
               >
-                Categoria
+                Papelería
               </Link>
+              <hr />
               <Link
-                to={"/libreria/categoria3"}
+                to={"/libreria?category=Accesorios útiles"}
                 className="text-muted var-txt text-decoration-none"
               >
-                Categoria
+                Accesorios útiles
               </Link>
+              <hr />
               <Link
-                to={"/libreria/categoria4"}
+                to={"/libreria?category=Electrónica"}
                 className="text-muted var-txt text-decoration-none"
               >
-                Categoria
+                Electrónica
+              </Link>
+              <hr />
+              <Link
+                to={"/libreria?category=Mates, vasos y botellas"}
+                className="text-muted var-txt text-decoration-none"
+              >
+                Mates - vasos y botellas
+              </Link>
+              <hr />
+              <Link
+                to={"/libreria?category=Oficina"}
+                className="text-muted var-txt text-decoration-none"
+              >
+                Oficina
+              </Link>
+              <hr />
+              <Link
+                to={"/libreria"}
+                className="text-muted var-txt text-decoration-none"
+              >
+                Limpiar filtros
               </Link>
             </div>
           </div>
           <div className="cards_container_libreria">
-            <Cards cards={cardsData} />
-            <Pagination />
+            <Products_Container />
           </div>
         </div>
       </div>

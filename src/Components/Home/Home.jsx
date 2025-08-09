@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import Cards from "../Cards/Cards";
 import Carousel_Home from "../Carousel_Home/Carousel_Home";
 import Sc2_Inicio from "../Sc2_Inicio/Sc2_Inicio";
 import "./Home_Style.css";
 import { useEffect } from "react";
+import Products_Container from "../Products_Container/Products_Container";
+import Card from "../Card/Card";
 
 const phoneNumber = "5493425260028";
 const message = `Hola! Quiero realizar un pedido de ...`;
@@ -12,35 +13,39 @@ const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${m
 
 const cardsData = [
   {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
+    badge: "DESTACADO",
+    nombre: "Premium Design",
+    precio_efectivo: "$49.99",
+    precio_transferencia: "$49.99",
+    URLIMAGE: ["-"]
   },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
+    {
+    badge: "DESTACADO",
+    nombre: "Premium Design",
+    precio_efectivo: "$49.99",
+    precio_transferencia: "$49.99",
+    URLIMAGE: ["-"]
   },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
+    {
+    badge: "DESTACADO",
+    nombre: "Premium Design",
+    precio_efectivo: "$49.99",
+    precio_transferencia: "$49.99",
+    URLIMAGE: ["-"]
+  },  {
+    badge: "DESTACADO",
+    nombre: "Premium Design",
+    precio_efectivo: "$49.99",
+    precio_transferencia: "$49.99",
+    URLIMAGE: ["-"]
   },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
+    {
+    badge: "DESTACADO",
+    nombre: "Premium Design",
+    precio_efectivo: "$49.99",
+    precio_transferencia: "$49.99",
+    URLIMAGE: ["-"]
+  }
 ];
 
 const Home = () => {
@@ -60,8 +65,10 @@ const Home = () => {
         data-aos-duration="2000"
       >
         <h1 className="text-center var-h1">LIBRERÍA</h1>
-        <div className="col-12">
-          <Cards cards={cardsData} />
+        <div className="col-12 d-flex flex-row justify-content-center gap-2 flex-wrap">
+          {cardsData.map((p)=> 
+          <Card prod={p}/>
+          )}
         </div>
 
         <div className="text-center m-4">

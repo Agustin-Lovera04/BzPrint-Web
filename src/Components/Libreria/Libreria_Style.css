@@ -119,4 +119,8 @@
     flex-direction: row-reverse;
     margin: .5rem !important;
 }
+
+.title_img_grid{
+    font-size: 1.2rem;
+}
 }
