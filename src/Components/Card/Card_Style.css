@@ -1,5 +1,5 @@
 .card {
-  --card-bg: #fff4d77f;;
+  --card-bg: #fff4d77f;
   --card-accent: #7c3aed;
   --card-text: #1e293b;
   --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
@@ -67,7 +67,6 @@
   transition: all 0.4s ease 0.1s;
 }
 
-
 .card__image {
   max-width: 100%;
   max-height: 100%;
@@ -83,7 +82,7 @@
 
 .card__title {
   color: var(--card-text);
-  font-size: .8em;
+  font-size: 0.8em;
   margin: 0;
   font-weight: 700;
   transition: all 0.3s ease;
@@ -112,8 +111,8 @@
   color: var(--card-text);
   transition: all 0.3s ease;
 }
-.card_price_transf{
-  font-size: .8rem;
+.card_price_transf {
+  font-size: 0.8rem;
 }
 .card__button {
   width: 28px;
@@ -132,8 +131,7 @@
 /* Hover Effects */
 .card:hover {
   transform: translateY(-10px);
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   border-color: rgba(124, 58, 237, 0.2);
 }
@@ -209,20 +207,19 @@
   }
 }
 
-
 @media (max-width: 768px) {
-  .card{
-  width: 170px;
+  .card {
+    width: 170px;
   }
   .card__content {
-  padding: 1em;
-  gap: 0.75em;
-}
-.card__title{
-    font-size: .8em;
-  font-weight: 700;
-}
-.card__price{
-  font-size: .8em;
-}
+    padding: 1em;
+    gap: 0.75em;
+  }
+  .card__title {
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+  .card__price {
+    font-size: 0.8em;
+  }
 }

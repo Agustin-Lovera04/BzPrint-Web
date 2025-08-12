@@ -14,38 +14,44 @@ const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${m
 const cardsData = [
   {
     badge: "DESTACADO",
-    nombre: "Premium Design",
-    precio_efectivo: "$49.99",
-    precio_transferencia: "$49.99",
-    URLIMAGE: ["-"]
+    codigo: "9887m",
+    nombre: "Velador led metal color one touch en caja",
+    precio_efectivo: "24079.71",
+    precio_transferencia: "30480.65",
+    URLIMAGE: [
+      "https://firebasestorage.googleapis.com/v0/b/bz-print-9007b.firebasestorage.app/o/images%2Fd7d0cb56-ac53-466e-a7ed-7b673e1652f7.jpg?alt=media&token=e5d3597f-e951-41f5-83d0-ab114ffb5041",
+    ],
   },
-    {
+  {
     badge: "DESTACADO",
-    nombre: "Premium Design",
-    precio_efectivo: "$49.99",
-    precio_transferencia: "$49.99",
-    URLIMAGE: ["-"]
+    codigo: "33169m",
+    nombre: "Auriculares inalambricos AS6 - en caja - 14 x 8 x",
+    precio_efectivo: "11684.06",
+    precio_transferencia: "14789.95",
+    URLIMAGE: [
+      "https://firebasestorage.googleapis.com/v0/b/bz-print-9007b.firebasestorage.app/o/images%2FOh09B063J08TtESC3ovAOfLXStvIiOfOrLAEKCm8.jpg?alt=media&token=566b32be-d2f6-4fda-8500-aa66b67e9346",
+    ],
   },
-    {
+  {
     badge: "DESTACADO",
-    nombre: "Premium Design",
-    precio_efectivo: "$49.99",
-    precio_transferencia: "$49.99",
-    URLIMAGE: ["-"]
-  },  {
-    badge: "DESTACADO",
-    nombre: "Premium Design",
-    precio_efectivo: "$49.99",
-    precio_transferencia: "$49.99",
-    URLIMAGE: ["-"]
+    codigo: "110010",
+    nombre: "CUADERNILLO A4 T/B HUSARES COLOR x80h. ",
+    precio_efectivo: "3485.51",
+    precio_transferencia: "4412.04",
+    URLIMAGE: [
+      "https://firebasestorage.googleapis.com/v0/b/bz-print-9007b.firebasestorage.app/o/images%2F129af6eb-b3a4-496f-a2e8-bd0ae703bad6.jpg?alt=media&token=37ffe9d7-5f8e-4e94-aaef-0c52f81aee34",
+    ],
   },
-    {
+  {
     badge: "DESTACADO",
-    nombre: "Premium Design",
-    precio_efectivo: "$49.99",
-    precio_transferencia: "$49.99",
-    URLIMAGE: ["-"]
-  }
+    codigo: "35292",
+    nombre: "RESALTADOR FILGO FINO PASTEL x6u. ",
+    precio_efectivo: "2359.42",
+    precio_transferencia: "2986.61",
+    URLIMAGE: [
+      "https://www.eloncemayorista.com.ar/system_files/articulos/imagenes/0110/35292.jpg?d=",
+    ],
+  },
 ];
 
 const Home = () => {
@@ -65,10 +71,10 @@ const Home = () => {
         data-aos-duration="2000"
       >
         <h1 className="text-center var-h1">LIBRERÍA</h1>
-        <div className="col-12 d-flex flex-row justify-content-center gap-2 flex-wrap">
-          {cardsData.map((p)=> 
-          <Card prod={p}/>
-          )}
+        <div className="col-12 d-flex flex-row justify-content-center gap-md-4 gap-2 flex-wrap">
+          {cardsData.map((p) => (
+            <Card prod={p} />
+          ))}
         </div>
 
         <div className="text-center m-4">

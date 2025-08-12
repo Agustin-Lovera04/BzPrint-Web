@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 const Render_Products = ({ prods, page, setSearchParams, category }) => {
   const itemsPerPage = 16;
-  const itemOffset = (page - 1) * itemsPerPage; // Calcula el offset basado en la prop 'page'
+  const itemOffset = (page - 1) * itemsPerPage; 
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = prods.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(prods.length / itemsPerPage);
@@ -45,18 +45,18 @@ const Render_Products = ({ prods, page, setSearchParams, category }) => {
         onPageChange={handlePageClick}
         pageRangeDisplayed={2}
         pageCount={pageCount}
-        forcePage={page - 1} // fuerza la página actual a ser la que está en la URL
+        forcePage={page - 1} 
         previousLabel="< Ant."
         renderOnZeroPageCount={null}
-        containerClassName={"pagination"} // El contenedor principal
-        pageClassName={"page-item"} // Cada ítem de página (los números)
-        pageLinkClassName={"page-link"} // Los enlaces dentro de cada ítem
-        previousClassName={"page-item"} // El botón de "anterior"
-        previousLinkClassName={"page-link"} // El enlace del botón "anterior"
-        nextClassName={"page-item"} // El botón de "siguiente"
-        nextLinkClassName={"page-link"} // El enlace del botón "siguiente"
-        breakClassName={"page-item"} // El ítem para los puntos suspensivos
-        breakLinkClassName={"page-link"} // El enlace de los puntos suspensivos
+        containerClassName={"pagination"} 
+        pageClassName={"page-item"} 
+        pageLinkClassName={"page-link"} 
+        previousClassName={"page-item"} 
+        previousLinkClassName={"page-link"} 
+        nextClassName={"page-item"} 
+        nextLinkClassName={"page-link"} 
+        breakClassName={"page-item"} 
+        breakLinkClassName={"page-link"} 
         activeClassName={"active"} 
       />
     </div>

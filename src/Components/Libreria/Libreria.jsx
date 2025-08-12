@@ -1,87 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Libreria_Style.css";
 import { useEffect } from "react";
 import Products_Container from "../Products_Container/Products_Container";
-const cardsData = [
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-  {
-    badge: "NEW",
-    title: "Premium Design",
-    description: "Hover to reveal stunning effects",
-    price: "$49.99",
-  },
-];
+
 const Libreria = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.AOS.init({
       duration: 1000,
     });
   }, []);
+
+  const handleBusquedaNombre = (e) => {
+    e.preventDefault();
+
+    const input = document.getElementById("busquedaNombre");
+    const busquedaNombre = input.value;
+
+    navigate(`/libreria?nombre=${busquedaNombre}`);
+
+    input.value = "";
+  };
+
   return (
     <div className="container-fluid">
       <div className="p-0 m-0 sc1_libreria">
@@ -109,7 +50,9 @@ const Libreria = () => {
               data-aos-duration="900"
             >
               <h3 className="title_img_grid">Resaltadores</h3>
-              <button className="btn">Ver más</button>
+              <button className="btn">
+                <Link to={"/libreria?category=Librería"}>Ver más</Link>
+              </button>
             </div>
             <div
               className="img3_grid_container d-flex flex-column justify-content-center align-items-center"
@@ -118,7 +61,9 @@ const Libreria = () => {
               data-aos-duration="900"
             >
               <h3 className="title_img_grid text-light">Cuadernillos</h3>
-              <button className="btn">Ver más</button>
+              <button className="btn">
+                <Link to={"/libreria?category=Papelería"}>Ver más</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -146,8 +91,16 @@ const Libreria = () => {
       <div className="sc2_libreria">
         <div className="row row_filters_libreria">
           <div className="col-md-5 col-8 input_buscar">
-            <input type="text" placeholder="Buscar producto" />
-            <button className="btn">Buscar</button>
+            <form onSubmit={handleBusquedaNombre}>
+              <input
+                type="text"
+                placeholder="Buscar producto"
+                id="busquedaNombre"
+              />
+              <button className="btn" type="submit">
+                Buscar
+              </button>
+            </form>
           </div>
 
           <div className="btn_categorias_container_mobile btn col-4 text-center">

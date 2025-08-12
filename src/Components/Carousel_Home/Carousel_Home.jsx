@@ -1,6 +1,18 @@
+import { useEffect } from 'react';
 import './Carousel_Home_Syle.css'
 
 const Carousel_Home = () => {
+    useEffect(() => {
+    const myCarouselElement = document.querySelector('#carouselExampleControls');
+    if (myCarouselElement) {
+      const carousel = new window.bootstrap.Carousel(myCarouselElement, {
+        interval: 4000,
+        ride: 'carousel',
+        pause: false,
+      });
+      carousel.cycle();
+    }
+  }, []);
   return (
     <div id="carouselExampleControls" className="carousel slide carousel-fade" data-bs-ride="carousel">
       <div className="carousel-inner">
