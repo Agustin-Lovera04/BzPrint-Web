@@ -74,6 +74,10 @@ hr{
   background-color: black 5px;
 }
 
+a{
+text-decoration: none;
+}
+
 
 .dropdown-menu{
   background-color: var(--color_var_6);
