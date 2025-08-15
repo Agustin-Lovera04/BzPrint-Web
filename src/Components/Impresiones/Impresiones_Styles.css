@@ -46,6 +46,10 @@
 }
 
 @media (max-width:768px) {
+    .banner_impresiones{
+        height: 30dvh;
+        object-fit: cover;
+    }
     .img_impresiones{
     max-width: 20rem;
     max-height: 90%;

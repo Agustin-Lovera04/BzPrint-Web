@@ -17,10 +17,10 @@ const Carousel_Home = () => {
     <div id="carouselExampleControls" className="carousel slide carousel-fade" data-bs-ride="carousel">
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="/images/Carousel.png" className="d-block w-100 carousel-image" alt="slide" />
+          <img src="/images/Carousel2.png" className="d-block w-100 carousel-image" alt="slide" />
         </div>
         <div className="carousel-item">
-          <img src="/images/Carousel2.png" className="d-block w-100 carousel-image" alt="slide" />
+          <img src="/images/Carousel.png" className="d-block w-100 carousel-image" alt="slide" />
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

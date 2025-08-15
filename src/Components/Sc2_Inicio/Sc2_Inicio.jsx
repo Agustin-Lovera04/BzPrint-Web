@@ -15,7 +15,7 @@ const Sc2_Inicio = () => {
         <div className="col-md-4 col-6 box box2 text-center" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">
           Esenciales del estudiante
           <button className='btn box_btn'>
-            <Link to={'/Librería?category=Librería'}>
+            <Link to={'/libreria?category=Librería'}>
               Ver mas
             </Link>
           </button>

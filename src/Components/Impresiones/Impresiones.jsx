@@ -18,7 +18,7 @@ const Impresiones = () => {
       <img
         src="/images/BannerImpresiones.png"
         alt="impresiones"
-        className="img-fluid"
+        className="img-fluid banner_impresiones"
       />
 
       <div

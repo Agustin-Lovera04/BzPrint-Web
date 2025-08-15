@@ -49,9 +49,9 @@ const Libreria = () => {
               data-aos-delay="500"
               data-aos-duration="900"
             >
-              <h3 className="title_img_grid">Resaltadores</h3>
+              <h3 className="title_img_grid">Pizarras</h3>
               <button className="btn">
-                <Link to={"/libreria?category=Librería"}>Ver más</Link>
+                <Link to={"/libreria?nombre=pizarra"}>Ver más</Link>
               </button>
             </div>
             <div
@@ -60,9 +60,9 @@ const Libreria = () => {
               data-aos-delay="700"
               data-aos-duration="900"
             >
-              <h3 className="title_img_grid text-light">Cuadernillos</h3>
+              <h3 className="title_img_grid text-light">Carpetas</h3>
               <button className="btn">
-                <Link to={"/libreria?category=Papelería"}>Ver más</Link>
+                <Link to={"/libreria?nombre=carpeta"}>Ver más</Link>
               </button>
             </div>
           </div>

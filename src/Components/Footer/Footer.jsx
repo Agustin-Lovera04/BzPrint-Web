@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="col-md-4 col-12 text-light text-center">
           <h4 >CONTACTO</h4>
           <hr />
-          <p className="contacto_txt_footer text-light ">+54 9 3425 26-0028 <br className='d-md-none'/> contacto@bzprints.com</p>
+          <p className="contacto_txt_footer text-light ">+54 9 3425 26-0028 <br className='d-md-none'/> bzprintsf@gmail.com</p>
         </div>
         <div className="col-md-4 col-12 text-center">
           {" "}
@@ -22,6 +22,7 @@ const Footer = () => {
         <div className="col-12 col-md-4 text-light text-center pt-md-0 pt-4 rrss_icons_footer">
           <h4>REDES</h4>
           <hr />
+          <a href="https://www.instagram.com/bzprint_/" target='_blank'>
           <svg
             width="54px"
             height="54px"
@@ -55,28 +56,7 @@ const Footer = () => {
               ></path>{" "}
             </g>
           </svg>
-          <svg
-            width="64px"
-            height="64px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M20 7.50414C18.5333 7.56942 15.52 6.75998 15.2 3H12.4V13.9666C12.4 17.0999 9.93253 18.4412 8.289 17.2507C6.20169 15.7389 7.60003 12.5958 10.2 12.9874V9.6583C8.20003 9.6583 4 10.4416 4 15.3374C4 21.6041 10.8146 21.4083 12.4 20.5824C14.9798 19.2385 15.6 17.7827 15.6 14.5541C15.6 11.6166 15.6 9.85413 15.6 9.0708C16.2667 9.39719 18.08 10.0891 20 10.2458"
-                stroke="#FFFFFF"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </g>
-          </svg>
+            </a>
         </div>
       </div>
       <div className="row text-center text-light pt-md-0 pt-4">

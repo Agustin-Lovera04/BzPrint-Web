@@ -140,7 +140,7 @@ const Cart = () => {
               </div>
 
               <div className="alert alert-warning">
-                El pago mediante transferencia tiene un recargo del 46%
+                El pago mediante transferencia tiene un recargo del 21%
               </div>
 
               <div className="checkbox-wrapper-41 mt-2 mb-4 d-flex align-items-center gap-2 justify-content-center justify-content-md-start">
